@@ -1,0 +1,16 @@
+Diary
+1) Wiederholung letzte Stunde
+2) Was sind Joins?
+3) Übungen mit JOINS
+
+
+Hausübung:
+
+SELECT job_id, salary FROM employees ORDER BY salary DESC;
+SELECT AVG(salary) FROM employees;
+SELECT first_name AS Vorname, last_name AS Nachname, department_name AS Abteilungsname FROM employees JOIN departments d on employees.department_id = d.department_id;
+SELECT department_name, postal_code, city, state_province, street_address FROM departments JOIN locations l on departments.location_id = l.location_id;
+SELECT department_name, region_name, city, state_province, street_address FROM departments JOIN locations l on departments.location_id = l.location_id JOIN regions;
+SELECT department_name, region_name, city, state_province, street_address, first_name, last_name AS Manager FROM departments JOIN locations l on departments.location_id = l.location_id JOIN regions JOIN employees.employees last_name;
+SELECT first_name, last_name AS Name, salary AS Gehalt, department_name AS Abteilung FROM employees JOIN departments d on d.department_id = employees.department_id;
+SELECT last_name AS Name, job_title AS Jobname FROM employees JOIN jobs j on j.job_id = employees.job_id;
